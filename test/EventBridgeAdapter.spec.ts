@@ -1,6 +1,6 @@
 import { EventBridgeClient, PutEventsCommand } from '@aws-sdk/client-eventbridge'
-import { EventBridgeAdapter } from '@lib/infra/aws/EventBridgeAdapter'
-import { FooEvent } from '@test/mocks/FooEvent'
+import { EventBridgeAdapter } from '../src/infra/aws/EventBridgeAdapter'
+import { FooEvent } from '../test/mocks/FooEvent'
 
 jest.mock('@aws-sdk/client-eventbridge', () => {
   const original = jest.requireActual('@aws-sdk/client-eventbridge')

@@ -1,5 +1,5 @@
-import { EventBroadcaster } from '@lib/application/EventBroadcaster'
-import { DomainEvent } from '@lib/domain/DomainEvent'
+import { EventBroadcaster } from './../../application/EventBroadcaster'
+import { DomainEvent } from './../../domain/DomainEvent'
 import { EventBridgeClient, PutEventsCommand } from '@aws-sdk/client-eventbridge'
 export class EventBridgeAdapter implements EventBroadcaster {
   constructor(private readonly client: EventBridgeClient) {}

@@ -1,4 +1,4 @@
-import { Handler } from '@lib/application/Handler'
+import { Handler } from './../../application/Handler'
 
 export class HandlerAlreadyRegisteredError extends Error {
   constructor(readonly handler: Handler) {

@@ -1,4 +1,4 @@
-import { DomainEvent } from '@lib/domain/DomainEvent'
+import { DomainEvent } from './../domain/DomainEvent'
 
 export interface Handler {
   eventName: string

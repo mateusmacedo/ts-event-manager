@@ -1,7 +1,7 @@
 import { EventBridgeClient } from '@aws-sdk/client-eventbridge'
-import { EventBroadcaster } from '@lib/application/EventBroadcaster'
-import { EventBridgeAdapter } from '@lib/infra/aws/EventBridgeAdapter'
-import { MissingConfigurationError } from '@lib/infra/error/MissingConfiguration'
+import { EventBroadcaster } from './../../application/EventBroadcaster'
+import { EventBridgeAdapter } from './../../infra/aws/EventBridgeAdapter'
+import { MissingConfigurationError } from './../../infra/error/MissingConfiguration'
 
 export class EventBroadcasterFactory {
   private static instance: EventBroadcaster

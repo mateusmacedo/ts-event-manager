@@ -84,8 +84,5 @@
   "dependencies": {
     "@aws-sdk/client-eventbridge": "^3.162.0",
     "module-alias": "^2.2.2"
-  },
-  "_moduleAliases": {
-    "@lib": "lib"
   }
 }

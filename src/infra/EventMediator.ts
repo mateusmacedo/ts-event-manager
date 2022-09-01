@@ -1,8 +1,8 @@
-import { HandlerAlreadyRegisteredError } from '@lib/application/error/HandlerAlreadyRegistered'
-import { HandlerIsNotRegisteredError } from '@lib/application/error/HandlerIsNotRegistered'
-import { EventManager } from '@lib/application/EventManager'
-import { Handler } from '@lib/application/Handler'
-import { DomainEvent } from '@lib/domain/DomainEvent'
+import { HandlerAlreadyRegisteredError } from './../application/error/HandlerAlreadyRegistered'
+import { HandlerIsNotRegisteredError } from './../application/error/HandlerIsNotRegistered'
+import { EventManager } from './../application/EventManager'
+import { Handler } from './../application/Handler'
+import { DomainEvent } from './../domain/DomainEvent'
 
 export class EventMediator implements EventManager {
   constructor(private _handlers: Handler[] = []) {}
@@ -30,7 +30,7 @@ export class EventMediator implements EventManager {
   }
 
   async publish(event: DomainEvent): Promise<void> {
-    const handlers = this._handlers.filter((handler) => handler.eventName === event.name)
+    const handlers = this._handlers.filter((handler) => handler.eventName === event.eventName)
     if (handlers.length) {
       const promises = handlers.map((handler) => handler.handle(event))
       await Promise.all(promises)

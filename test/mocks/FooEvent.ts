@@ -1,6 +1,6 @@
-import { DomainEvent } from '@lib/domain/DomainEvent'
+import { DomainEvent } from '../../src/domain/DomainEvent'
 
 export class FooEvent implements DomainEvent {
-  readonly name = 'FooEvent'
+  readonly eventName = 'FooEvent'
   constructor(readonly data: Record<string, any>, readonly metadata: Record<string, any>) {}
 }

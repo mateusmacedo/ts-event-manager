@@ -1,6 +1,6 @@
-import { EventManager } from '@lib/application/EventManager'
-import { Handler } from '@lib/application/Handler'
-import { EventMediator } from '@lib/infra/EventMediator'
+import { EventManager } from './../../application/EventManager'
+import { Handler } from './../../application/Handler'
+import { EventMediator } from './../../infra/EventMediator'
 
 export class EventManagerFactory {
   private static instance: EventManager

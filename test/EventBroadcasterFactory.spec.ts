@@ -1,7 +1,7 @@
-import { EventBridgeAdapter } from '@lib/infra/aws/EventBridgeAdapter'
-import { MissingConfigurationError } from '@lib/infra/error/MissingConfiguration'
-import { EventBroadcasterFactory } from '@lib/main/factory/EventBroadcasterFactory'
 import * as dotenv from 'dotenv'
+import { EventBridgeAdapter } from '../src/infra/aws/EventBridgeAdapter'
+import { MissingConfigurationError } from '../src/infra/error/MissingConfiguration'
+import { EventBroadcasterFactory } from '../src/main/factory/EventBroadcasterFactory'
 
 describe('EventBroadcasterFactory', () => {
   beforeEach(() => {
