@@ -7,7 +7,7 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "./lib",
     "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
@@ -22,13 +22,8 @@
     "strict": true,
     "moduleResolution": "node",
     "paths": {
-      "@lib": [
-        "src"
-      ],
-      "@lib/*": [
-        "src/*"
-      ]
+      "@lib": ["src"],
+      "@lib/*": ["src/*"]
     }
   }
 }
-
