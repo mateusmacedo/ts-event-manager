@@ -1,5 +1,5 @@
-import DomainEvent from '@lib/domain/DomainEvent'
+import { DomainEvent } from '@lib/domain/DomainEvent'
 
-export default interface EventBroadcaster {
+export interface EventBroadcaster {
   dispatch: (event: DomainEvent) => Promise<void>
 }

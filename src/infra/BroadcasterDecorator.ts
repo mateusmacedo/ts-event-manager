@@ -1,9 +1,9 @@
-import EventBroadcaster from '@lib/application/EventBroadcaster'
-import EventManager from '@lib/application/EventManager'
-import Handler from '@lib/application/Handler'
-import DomainEvent from '@lib/domain/DomainEvent'
+import { EventBroadcaster } from '@lib/application/EventBroadcaster'
+import { EventManager } from '@lib/application/EventManager'
+import { Handler } from '@lib/application/Handler'
+import { DomainEvent } from '@lib/domain/DomainEvent'
 
-export default class BroadcastDecorator implements EventManager {
+export class BroadcastDecorator implements EventManager {
   constructor(private _eventManager: EventManager, private readonly broadcaster: EventBroadcaster) {}
   register(handler: Handler): void {
     this._eventManager.register(handler)

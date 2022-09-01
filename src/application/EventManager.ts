@@ -1,7 +1,7 @@
-import Handler from '@lib/application/Handler'
-import DomainEvent from '@lib/domain/DomainEvent'
+import { Handler } from '@lib/application/Handler'
+import { DomainEvent } from '@lib/domain/DomainEvent'
 
-export default interface EventManager {
+export interface EventManager {
   register: (handler: Handler) => void
 
   unRegister: (handler: Handler) => void

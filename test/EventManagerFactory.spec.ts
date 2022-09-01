@@ -1,5 +1,5 @@
-import EventMediator from '@lib/infra/EventMediator'
-import EventManagerFactory from '@lib/main/factory/EventManagerFactory'
+import { EventMediator } from '@lib/infra/EventMediator'
+import { EventManagerFactory } from '@lib/main/factory/EventManagerFactory'
 
 describe('EventManagerFactory', () => {
   it('should create a event mediator', () => {

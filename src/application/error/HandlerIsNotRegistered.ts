@@ -1,6 +1,6 @@
-import Handler from '@lib/application/Handler'
+import { Handler } from '@lib/application/Handler'
 
-export default class HandlerIsNotRegisteredError extends Error {
+export class HandlerIsNotRegisteredError extends Error {
   constructor(readonly handler: Handler) {
     super(`Handler ${handler.constructor.name} is not registered`)
   }

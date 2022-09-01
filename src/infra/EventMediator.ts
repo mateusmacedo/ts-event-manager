@@ -1,10 +1,10 @@
-import HandlerAlreadyRegisteredError from '@lib/application/error/HandlerAlreadyRegistered'
-import HandlerIsNotRegisteredError from '@lib/application/error/HandlerIsNotRegistered'
-import EventManager from '@lib/application/EventManager'
-import Handler from '@lib/application/Handler'
-import DomainEvent from '@lib/domain/DomainEvent'
+import { HandlerAlreadyRegisteredError } from '@lib/application/error/HandlerAlreadyRegistered'
+import { HandlerIsNotRegisteredError } from '@lib/application/error/HandlerIsNotRegistered'
+import { EventManager } from '@lib/application/EventManager'
+import { Handler } from '@lib/application/Handler'
+import { DomainEvent } from '@lib/domain/DomainEvent'
 
-export default class EventMediator implements EventManager {
+export class EventMediator implements EventManager {
   constructor(private _handlers: Handler[] = []) {}
 
   private handlerIsRegistered(handler: Handler): boolean {

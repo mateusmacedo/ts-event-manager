@@ -1,9 +1,9 @@
 import { EventBridgeClient } from '@aws-sdk/client-eventbridge'
-import EventBroadcaster from '@lib/application/EventBroadcaster'
-import EventBridgeAdapter from '@lib/infra/aws/EventBridgeAdapter'
-import MissingConfigurationError from '@lib/infra/error/MissingConfiguration'
+import { EventBroadcaster } from '@lib/application/EventBroadcaster'
+import { EventBridgeAdapter } from '@lib/infra/aws/EventBridgeAdapter'
+import { MissingConfigurationError } from '@lib/infra/error/MissingConfiguration'
 
-export default class EventBroadcasterFactory {
+export class EventBroadcasterFactory {
   private static instance: EventBroadcaster
   private static checkEnvironmentVariables(): void {
     if (!process.env.AWS_REGION) {

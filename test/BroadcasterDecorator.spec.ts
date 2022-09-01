@@ -1,8 +1,8 @@
-import BroadcastDecorator from '@lib/infra/BroadcasterDecorator'
-import EventBroadcasterFactory from '@lib/main/factory/EventBroadcasterFactory'
-import EventManagerFactory from '@lib/main/factory/EventManagerFactory'
-import FooEvent from '@test/mocks/FooEvent'
-import FooHandler from '@test/mocks/FooHandler'
+import { BroadcastDecorator } from '@lib/infra/BroadcasterDecorator'
+import { EventBroadcasterFactory } from '@lib/main/factory/EventBroadcasterFactory'
+import { EventManagerFactory } from '@lib/main/factory/EventManagerFactory'
+import { FooEvent } from '@test/mocks/FooEvent'
+import { FooHandler } from '@test/mocks/FooHandler'
 import * as dotenv from 'dotenv'
 jest.mock('@aws-sdk/client-eventbridge', () => {
   const original = jest.requireActual('@aws-sdk/client-eventbridge')

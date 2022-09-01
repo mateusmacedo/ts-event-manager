@@ -1,7 +1,7 @@
-import Handler from '@lib/application/Handler'
-import DomainEvent from '@lib/domain/DomainEvent'
+import { Handler } from '@lib/application/Handler'
+import { DomainEvent } from '@lib/domain/DomainEvent'
 
-export default class FooHandler implements Handler {
+export class FooHandler implements Handler {
   eventName = 'FooEvent'
 
   async handle(event: DomainEvent): Promise<void> {

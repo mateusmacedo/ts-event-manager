@@ -1,4 +1,4 @@
-export default interface DomainEvent {
+export interface DomainEvent {
   readonly name: string
   readonly data: Record<string, any>
 

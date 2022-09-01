@@ -1,9 +1,9 @@
-import HandlerAlreadyRegisteredError from '@lib/application/error/HandlerAlreadyRegistered'
-import HandlerIsNotRegisteredError from '@lib/application/error/HandlerIsNotRegistered'
-import EventMediator from '@lib/infra/EventMediator'
-import EventManagerFactory from '@lib/main/factory/EventManagerFactory'
-import FooEvent from '@test/mocks/FooEvent'
-import FooHandler from '@test/mocks/FooHandler'
+import { HandlerAlreadyRegisteredError } from '@lib/application/error/HandlerAlreadyRegistered'
+import { HandlerIsNotRegisteredError } from '@lib/application/error/HandlerIsNotRegistered'
+import { EventMediator } from '@lib/infra/EventMediator'
+import { EventManagerFactory } from '@lib/main/factory/EventManagerFactory'
+import { FooEvent } from '@test/mocks/FooEvent'
+import { FooHandler } from '@test/mocks/FooHandler'
 
 describe('EventMediator', () => {
   const handler = new FooHandler()
