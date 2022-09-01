@@ -21,10 +21,10 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': [
-      "error",
+      'error',
       {
-        "endOfLine": "auto"
-      },
+        endOfLine: 'auto'
+      }
     ],
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/consistent-type-definitions': 'off',
@@ -33,6 +33,7 @@ module.exports = {
     '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/no-namespace': 'off',
-    'import/export': 'off'
+    'import/export': 'off',
+    '@typescript-eslint/no-explicit-any': 'off'
   }
-};
+}
