@@ -1,3 +1,11 @@
+# v1.3.1
+
+## 2022-09-01
+
+> Refactoring
+
+* refactor: remove default export and config module alias ([`cf5da2b`](https://github.com/mateusmacedo/ts-event-manager/commit/cf5da2bfd128056b781183d644de1fc082ea34e2))
+
 # v1.3.0
 
 ## 2022-09-01
