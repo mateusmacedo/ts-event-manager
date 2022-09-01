@@ -1,3 +1,11 @@
+# v1.2.0
+
+## 2022-09-01
+
+> Refactoring
+
+* refactor: transform event broadcaster in singleton ([`08202ff`](https://github.com/mateusmacedo/ts-event-manager/commit/08202ffcf198206c8c3d80bb2b09731795508745))
+
 # v1.1.0
 
 ## 2022-09-01
