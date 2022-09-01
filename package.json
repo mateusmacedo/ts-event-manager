@@ -43,6 +43,7 @@
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "auto-changelog": "^2.4.0",
+    "dotenv": "^16.0.2",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-typescript": "^3.0.0",
@@ -81,5 +82,8 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {
+    "@aws-sdk/client-eventbridge": "^3.162.0"
+  }
 }
