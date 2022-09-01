@@ -4,6 +4,7 @@ import EventBridgeAdapter from '@lib/infra/aws/EventBridgeAdapter'
 import MissingConfigurationError from '@lib/infra/error/MissingConfiguration'
 
 export default class EventBroadcasterFactory {
+  private static instance: EventBroadcaster
   private static checkEnvironmentVariables(): void {
     if (!process.env.AWS_REGION) {
       throw new MissingConfigurationError('AWS_REGION')
@@ -16,14 +17,18 @@ export default class EventBroadcasterFactory {
     }
   }
   public static createEventBridgeAdapter(): EventBroadcaster {
-    this.checkEnvironmentVariables()
-    const client = new EventBridgeClient({
-      region: process.env.AWS_REGION,
-      credentials: {
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
-      }
-    })
-    return new EventBridgeAdapter(client)
+    if (!EventBroadcasterFactory.instance) {
+      EventBroadcasterFactory.checkEnvironmentVariables()
+      EventBroadcasterFactory.instance = new EventBridgeAdapter(
+        new EventBridgeClient({
+          region: process.env.AWS_REGION,
+          credentials: {
+            accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+            secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+          }
+        })
+      )
+    }
+    return EventBroadcasterFactory.instance
   }
 }

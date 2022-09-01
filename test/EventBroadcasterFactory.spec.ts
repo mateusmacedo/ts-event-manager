@@ -7,6 +7,7 @@ describe('EventBroadcasterFactory', () => {
   beforeEach(() => {
     jest.clearAllMocks()
     dotenv.config()
+    EventBroadcasterFactory['instance'] = undefined
   })
   it('should create a event bridge adapter instance', () => {
     const instance = EventBroadcasterFactory.createEventBridgeAdapter()
