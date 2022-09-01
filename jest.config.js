@@ -1,7 +1,8 @@
 module.exports = {
-  roots: ['<rootDir>/src'],
+  roots: ['<rootDir>/test'],
   moduleNameMapper: {
-    '@lib/(.*)': '<rootDir>/src/$1'
+    '@lib/(.*)': '<rootDir>/src/$1',
+    '@test/(.*)': '<rootDir>/test/$1'
   },
   moduleFileExtensions: ['ts', 'js', 'tsx', 'jsx'],
   preset: 'ts-jest',
