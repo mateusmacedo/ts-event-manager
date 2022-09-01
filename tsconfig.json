@@ -7,8 +7,7 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "outDir": "./lib",
-    "baseUrl": "./",
+    "outDir": "lib",
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
@@ -21,6 +20,7 @@
     "target": "es2021",
     "strict": true,
     "moduleResolution": "node",
+    "baseUrl": "./",
     "paths": {
       "@lib": ["src"],
       "@lib/*": ["src/*"],
