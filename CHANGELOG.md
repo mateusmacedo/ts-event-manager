@@ -1,3 +1,11 @@
+# v1.3.0
+
+## 2022-09-01
+
+> Refactoring
+
+* refactor: single export ([`c1b94ff`](https://github.com/mateusmacedo/ts-event-manager/commit/c1b94ff7eb5857ef0a33889570b6573b22cd2209))
+
 # v1.2.0
 
 ## 2022-09-01
