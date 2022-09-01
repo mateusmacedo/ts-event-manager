@@ -15,6 +15,7 @@
     "test:cov": "npm run test -- --coverage --config ./jest-unit.config.js",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --passWithNoTests --runInBand --no-cache --config ./jest-unit.config.js",
     "test:e2e": "npm run test -- --config ./jest-e2e.config.js",
+    "build": "tsc -p tsconfig.build.json",
     "husky": "husky install",
     "prepare": "npm run build",
     "prepublishOnly": "npm run test && npm run format && npm run lint",
